@@ -1,24 +1,9 @@
 <template>
-  <!-- <router-link :to="/typing-effect" />  -->
-  <!-- <router-link :to="{ name: 'Fancy pic' }"> User </router-link> -->
-  <div @click="pushWithQuery('Fancy pic')">PUSH</div>
-  <typing-and-obj-pic />
+  <router-link to="/typing-effect"> Fancy Pic </router-link>
+  <router-view></router-view>
 </template>
 
-<script setup>
-import TypingAndObjPic from "./components/TypingAndObjPic.vue";
-import { useRouter } from "vue-router";
-
-const router = useRouter();
-// const route = useRoute();
-
-function pushWithQuery(query) {
-  console.log("pushWithQuery called with query: " + query);
-  router.push({
-    name: query,
-  });
-}
-</script>
+<script setup></script>
 
 <style>
 #app {
