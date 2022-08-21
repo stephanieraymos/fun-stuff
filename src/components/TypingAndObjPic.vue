@@ -1,6 +1,8 @@
 <template>
   <div class="container">
     <div class="text">Really cool thingy.</div>
+    <img src="../assets/self-blue.png" alt="" class="image" />
+
     <div class="code-container">
       <pre class="code">
 <span class="var-highlight">const</span> self = {
@@ -14,7 +16,6 @@
     ];
 }; </pre>
     </div>
-    <img src="../assets/self-blue.png" alt="" class="image" />
     <div class="window-outline"></div>
   </div>
 </template>
@@ -59,6 +60,8 @@
 }
 
 .image {
+  // display: flex;
+  // position: relative;
   width: 100vw;
 }
 .code-container {
