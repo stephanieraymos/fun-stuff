@@ -1,5 +1,8 @@
 <template>
-  <router-link to="/typing-effect"> Fancy Pic </router-link>
+  <div class="nav">
+    <router-link to="/typing-effect"> Fancy Pic </router-link>
+  </div>
+
   <router-view></router-view>
 </template>
 
@@ -11,5 +14,10 @@
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothtypingandobjpicing: grayscale;
   color: #2c3e50;
+}
+.nav {
+  display: flex;
+  padding: 2px 5px;
+  justify-content: flex-end;
 }
 </style>

@@ -28,22 +28,13 @@
   position: relative;
 }
 .text {
+  max-width: fit-content;
   overflow: hidden; /* Ensures the content is not revealed until the animation */
   border-right: 0.15em solid orange; /* The typwriter cursor */
   white-space: nowrap; /* Keeps the content on a single line */
   margin: 0 auto; /* Gives that scrolling effect as the typing happens */
   letter-spacing: 0.17em; /* Adjust as needed */
-  animation: typing 1.5s steps(40, end), blink-caret 0.75s step-end infinite;
-}
-
-.image {
-  width: 100vw;
-}
-.code-container {
-  position: absolute;
-  color: white;
-  top: 25%;
-  left: 20%;
+  animation: typing 2s steps(40, end), blink-caret 0.75s step-end infinite;
 }
 
 /* The typing effect */
@@ -52,7 +43,7 @@
     width: 0;
   }
   to {
-    width: 15%;
+    width: 100%;
   }
 }
 
@@ -65,5 +56,15 @@
   50% {
     border-color: orange;
   }
+}
+
+.image {
+  width: 100vw;
+}
+.code-container {
+  position: absolute;
+  color: white;
+  top: 25%;
+  left: 20%;
 }
 </style>
