@@ -26,10 +26,11 @@
     left: 50%;
     transform: translateX(-50%);
     border: var(--color-white) 5px solid;
-    width: 70vh;
+    width: 70vw;
     height: 50vh;
     box-shadow: 0 3px 10px whitesmoke;
   }
+
   .window-top-bar {
     background: var(--color-white);
     height: 8%;
@@ -58,6 +59,26 @@
   .green {
     left: 55px;
     background: #00ca4e;
+  }
+
+  @media only screen and (max-width: 600px) {
+    .window {
+      height: 25vh;
+    }
+    .dot {
+      top: 0;
+      height: 15px;
+      width: 15px;
+    }
+    .red {
+      left: 5px;
+    }
+    .yellow {
+      left: 25px;
+    }
+    .green {
+      left: 45px;
+    }
   }
 }
 </style>
