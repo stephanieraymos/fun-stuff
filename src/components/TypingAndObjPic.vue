@@ -31,9 +31,9 @@
 .text {
   max-width: fit-content;
   overflow: hidden; /* Ensures the content is not revealed until the animation */
-  border-right: 0.15em solid orange; /* The typwriter cursor */
+  border-right: 0.15em solid var(--color-light-blue); /* The typwriter cursor */
   white-space: nowrap; /* Keeps the content on a single line */
-  margin: 0 auto; /* Gives that scrolling effect as the typing happens */
+  margin: 10px auto 0; /* Gives that scrolling effect as the typing happens */
   letter-spacing: 0.17em; /* Adjust as needed */
   animation: typing 2s steps(40, end), blink-caret 0.75s step-end infinite;
 }
@@ -55,7 +55,7 @@
     border-color: transparent;
   }
   50% {
-    border-color: orange;
+    border-color: var(--color-light-blue);
   }
 }
 
