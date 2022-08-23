@@ -3,7 +3,7 @@
     <div class="form-container">
       <form enctype="multipart/form-data">
         <label for="img">
-          Click here to change the image
+          Click here to add an image
           <input type="file" id="img" name="img" required />
         </label>
         <input type="submit" />
@@ -21,7 +21,6 @@
       </div>
       <img
         id="preview"
-        src="../assets/self-green.png"
         alt="self-pic"
         class="image"
       />

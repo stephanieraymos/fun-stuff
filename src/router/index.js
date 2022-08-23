@@ -11,7 +11,7 @@ const routes = [
     path: "/trans-window",
     name: "Trasparent Window",
     component: TransWindow,
-  }
+  },
   // {
   //   path: "/typing-effect",
   //   name: "Fancy pic",
@@ -19,8 +19,7 @@ const routes = [
   // },
 ];
 const router = createRouter({
-  // mode: 'hash',
-  history: createWebHistory(process.env.BASE_URL),
+  history: createWebHistory(),
   routes,
 });
 export default router;
