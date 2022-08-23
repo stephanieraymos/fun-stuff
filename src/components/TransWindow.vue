@@ -1,7 +1,7 @@
 <template>
   <div class="container">
     <div class="form-container">
-      <form enctype="multipart/form-data">
+      <form enctype="multipart/form-data" @submit="loadImg">
         <label for="img">
           Click here to add an image
           <input type="file" id="img" name="img" required />
@@ -30,7 +30,7 @@
 </template>
 
 <script>
-window.onload = function () {
+window.onload = function loadImg() {
   const files = document.querySelectorAll("input[type=file]");
   files[0].addEventListener("change", function () {
     if (this.files && this.files[0]) {
