@@ -37,7 +37,7 @@
     width: 70vw;
     height: 50vh;
     top: 15%;
-    box-shadow: 0 3px 10px black;
+    box-shadow: 0 0 0 2000px rgba(0, 0, 0, 0.5);
   }
   #window-top-bar {
     background: var(--color-white);
@@ -100,7 +100,7 @@
   @media only screen and (min-width: 1300px) {
     #window {
       width: 60vw;
-      top: 10%
+      top: 10%;
     }
   }
   @media only screen and (min-width: 1500px) {
