@@ -2,6 +2,7 @@
   <div class="nav">
     <router-link to="/"> Fancy Pic </router-link>
     <router-link to="/trans-window"> Transparent Window </router-link>
+    <router-link to="/hex-images"> Hex Images </router-link>
   </div>
 
   <router-view></router-view>
@@ -34,6 +35,7 @@ body {
   a {
     text-decoration: none;
     color: var(--color-white);
+    border-left: 1px solid white;
     background: var(--color-light-blue);
     padding: 5px;
   }
