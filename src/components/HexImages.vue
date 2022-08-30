@@ -3,19 +3,10 @@
     <img src="../assets/o1.jpg" alt="Oliver on a bike" />
     <img src="../assets/o2.jpg" alt="Oliver on a hike" />
     <img src="../assets/o3.jpg" alt="Oliver at baskin robbins" />
-    <img
-      src="../assets/o4.jpg"
-      alt="Oliver at the beach"
-    />
+    <img src="../assets/o4.jpg" alt="Oliver at the beach" />
     <img src="../assets/o5.jpg" alt="Oliver eating a sandwich" />
-    <img
-      src="../assets/o6.jpg"
-      alt="Oliver, Killian and Talon"
-    />
-    <img
-      src="../assets/o7.jpg"
-      alt="Oliver at the park"
-    />
+    <img src="../assets/o6.jpg" alt="Oliver, Killian and Talon" />
+    <img src="../assets/o7.jpg" alt="Oliver at the park" />
   </div>
 </template>
 
@@ -23,7 +14,7 @@
 
 <style lang="scss" scoped>
 .gallery {
-  --s: 150px; /* control the size */
+  --s: 250px; /* control the size */
   --g: 10px; /* control the gap */
   display: grid;
   margin: calc(var(--s) + var(--g));
@@ -72,9 +63,17 @@
 
 body {
   margin: 0;
-  min-height: 100vh;
   display: grid;
-  place-content: center;
-  background: #aabbfb;
+  background: var(--color-grayish-blue);
+}
+@media only screen and (max-width: 700px) {
+  .gallery {
+    --s: 200px; /* control the size */
+  }
+}
+@media only screen and (max-width: 500px) {
+  .gallery {
+    --s: 150px; /* control the size */
+  }
 }
 </style>
