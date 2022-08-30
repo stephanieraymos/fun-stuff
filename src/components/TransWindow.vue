@@ -1,22 +1,6 @@
 <template>
   <div class="container">
-    <div class="form-container">
-      <form enctype="multipart/form-data">
-        <label for="img">
-          Click here to add an image
-          <input
-            type="file"
-            id="img"
-            name="img"
-            required
-            @change="loadImg(e)"
-          />
-        </label>
-        <input type="submit" />
-      </form>
-    </div>
     <!-- WINDOW BOX -->
-
     <div id="window">
       <div id="window-top-bar">
         <div class="buttons">
@@ -25,60 +9,22 @@
           <span class="green dot"></span>
         </div>
       </div>
-      <img id="preview" alt="self-pic" class="image" />
     </div>
     <!-- END WINDOW BOX -->
   </div>
 </template>
 
-<script setup>
-function loadImg(e) {
-  console.log(e);
-  const files = document.querySelectorAll("input[type=file]");
-
-  if (files && files[0]) {
-    console.log("files", files, files[0]);
-
-    var reader = new FileReader();
-    reader.onload = function (e) {
-      document.getElementById("preview").setAttribute("src", e.target.result);
-    };
-    reader.readAsDataURL(files[0]);
-
-    // reader.addEventListener("load", function (e) {
-    //   document.getElementById("preview").setAttribute("src", e.target.result);
-    // });
-    // reader.readAsDataURL(document.querySelector("input").files[0]);
-  }
-}
-</script>
+<script setup></script>
 
 <style lang="scss" scoped>
 .container {
-  background: url('..//assets/ethan-and-ollie.jpg') no-repeat center;
+  background: url("..//assets/code.png") no-repeat center;
   height: 100vh;
   position: relative;
   display: flex;
   justify-content: center;
   align-items: center;
 
-  .form-container {
-    position: absolute;
-    top: 10%;
-    color: white;
-  }
-  .image {
-    width: 100%;
-    height: 92%;
-    object-fit: cover; // crop
-    object-position: 25% 25%; // centering the crop
-  }
-  input {
-    display: none;
-  }
-  label {
-    cursor: pointer;
-  }
   #window {
     position: absolute;
     // top: 20%;
@@ -93,10 +39,7 @@ function loadImg(e) {
     height: 8%;
     margin: 0 -1px; // Takes care of tiny blue line on left and right of bar
   }
-  .buttons {
-    position: relative;
-    background: red;
-  }
+
   .dot {
     position: absolute;
     top: 5px;
@@ -119,7 +62,7 @@ function loadImg(e) {
   }
 
   @media only screen and (max-width: 600px) {
-    .window {
+    #window {
       height: 25vh;
     }
     .dot {
@@ -138,8 +81,25 @@ function loadImg(e) {
     }
   }
   @media only screen and (min-width: 1200px) {
-    .window {
-      height: 70vh;
+    #window {
+      height: 55vh;
+      width: 70vw;
+    }
+  }
+  @media only screen and (min-width: 600px) and (max-width: 900px) {
+    #window {
+      height: 40vh;
+      width: 70vw;
+    }
+  }
+  @media only screen and (min-width: 1300px) {
+    #window {
+      width: 60vw;
+    }
+  }
+  @media only screen and (min-width: 1500px) {
+    #window {
+      width: 50vw;
     }
   }
 }
