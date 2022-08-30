@@ -66,8 +66,11 @@
 }
 .code-container {
   position: absolute;
+  padding: 0 5px;
   color: white;
   top: 25%;
   left: 20%;
+  background: rgba(0, 0, 0, 0.3);
+  box-shadow: 5px 5px;
 }
 </style>
