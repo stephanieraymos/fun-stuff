@@ -1,10 +1,16 @@
 <template>
   <div class="container">
     <div class="form-container">
-      <form enctype="multipart/form-data" @submit="loadImg">
+      <form enctype="multipart/form-data">
         <label for="img">
           Click here to add an image
-          <input type="file" id="img" name="img" required />
+          <input
+            type="file"
+            id="img"
+            name="img"
+            required
+            @change="loadImg(e)"
+          />
         </label>
         <input type="submit" />
       </form>
@@ -19,34 +25,37 @@
           <span class="green dot"></span>
         </div>
       </div>
-      <img
-        id="preview"
-        alt="self-pic"
-        class="image"
-      />
+      <img id="preview" alt="self-pic" class="image" />
     </div>
     <!-- END WINDOW BOX -->
   </div>
 </template>
 
-<script>
-window.onload = function loadImg() {
+<script setup>
+function loadImg(e) {
+  console.log(e);
   const files = document.querySelectorAll("input[type=file]");
-  files[0].addEventListener("change", function () {
-    if (this.files && this.files[0]) {
-      var reader = new FileReader();
-      reader.onload = function (e) {
-        document.getElementById("preview").setAttribute("src", e.target.result);
-      };
-      reader.readAsDataURL(this.files[0]);
-    }
-  });
-};
+
+  if (files && files[0]) {
+    console.log("files", files, files[0]);
+
+    var reader = new FileReader();
+    reader.onload = function (e) {
+      document.getElementById("preview").setAttribute("src", e.target.result);
+    };
+    reader.readAsDataURL(files[0]);
+
+    // reader.addEventListener("load", function (e) {
+    //   document.getElementById("preview").setAttribute("src", e.target.result);
+    // });
+    // reader.readAsDataURL(document.querySelector("input").files[0]);
+  }
+}
 </script>
 
 <style lang="scss" scoped>
 .container {
-  background: var(--color-dark-blue);
+  background: url('..//assets/ethan-and-ollie.jpg') no-repeat center;
   height: 100vh;
   position: relative;
   display: flex;
