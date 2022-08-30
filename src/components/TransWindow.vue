@@ -18,7 +18,11 @@
 
 <style lang="scss" scoped>
 .container {
-  background: url("..//assets/code.png") no-repeat center;
+  background: url("..//assets/ollie-bmx.jpg") no-repeat center center fixed;
+  -webkit-background-size: cover;
+  -moz-background-size: cover;
+  -o-background-size: cover;
+  background-size: cover;
   height: 100vh;
   position: relative;
   display: flex;
@@ -32,7 +36,8 @@
     border: var(--color-white) 5px solid;
     width: 70vw;
     height: 50vh;
-    box-shadow: 0 3px 10px whitesmoke;
+    top: 15%;
+    box-shadow: 0 3px 10px black;
   }
   #window-top-bar {
     background: var(--color-white);
@@ -95,6 +100,7 @@
   @media only screen and (min-width: 1300px) {
     #window {
       width: 60vw;
+      top: 10%
     }
   }
   @media only screen and (min-width: 1500px) {
