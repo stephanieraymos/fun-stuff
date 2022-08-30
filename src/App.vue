@@ -1,6 +1,6 @@
 <template>
   <div class="nav">
-    <router-link to="/typing-effect"> Fancy Pic </router-link>
+    <router-link to="/"> Fancy Pic </router-link>
     <router-link to="/trans-window"> Transparent Window </router-link>
   </div>
 

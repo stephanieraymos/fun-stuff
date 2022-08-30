@@ -3,7 +3,8 @@ import TypingAndObjPic from "../components/TypingAndObjPic.vue";
 import TransWindow from "../components/TransWindow.vue";
 const routes = [
   {
-    path: "/typing-effect",
+    // path: "/typing-effect",
+    path: "/",
     name: "Fancy pic",
     component: TypingAndObjPic,
   },
